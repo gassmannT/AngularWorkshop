@@ -10,19 +10,15 @@
                         <th>Title</th>
                         <th>Room</th>
                         <th>Rating</th>
-                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="session" *ngFor="let item of list">
+                    <tr class="session" *ngFor="let item of list" (click)="onEdit(item)">
                         <td>{{ item.title }}</td>
                         <td>{{ item.room }}</td>
                         <td>
                             <span *ngIf="item.rating">{{item.rating}}</span>
                             <span *ngIf="!item.rating">-</span>
-                        </td>
-                        <td>
-                            <a [routerLink]="['/session/edit', item.id]">edit</a>
                         </td>
                     </tr>
                 </tbody>
