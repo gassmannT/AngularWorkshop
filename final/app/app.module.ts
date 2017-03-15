@@ -5,17 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './components/app/app.component';
-import { SessionListComponent } from './components/session/list/sessionList.component';
-import { SessionEditComponent } from './components/session/edit/session-edit.component';
-
-import { SessionService } from './services/api/session.service';
-import { DataService } from './services/data.service';
-import { UrlService } from './services/api/url.service';
+import { AppComponent } from "./app.component";
+import { SessionsComponent } from "./sessions/sessions.component";
+import { SessionComponent } from "./sessions/session/session.component";
+import { DataService } from "./shared/data.service";
+import { SessionService } from "./sessions/shared/session.service";
 
 const routes: Routes = [
-  { path: '', component: SessionListComponent },
-  { path: 'session/edit/:id', component: SessionEditComponent },
+  { path: '', component: SessionsComponent },
+  { path: 'session/edit/:id', component: SessionComponent },
   // { path: '**', redirectTo: '/', pathMatch: 'full' }
 ];
 
@@ -30,12 +28,11 @@ const routes: Routes = [
   ],
   declarations: [
     AppComponent,
-    SessionListComponent,
-    SessionEditComponent
+    SessionsComponent,
+    SessionComponent
   ],
   providers: [
-    SessionService,
-    UrlService
+    SessionService
   ],
   bootstrap: [AppComponent]
 })
