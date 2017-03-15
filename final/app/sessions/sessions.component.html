@@ -1,0 +1,28 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        {{pageTitle}}
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table session-table" *ngIf="list && list.length">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Room</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="session" *ngFor="let item of list" (click)="onEdit(item)">
+                        <td>{{ item.title }}</td>
+                        <td>{{ item.room }}</td>
+                        <td>
+                            <span *ngIf="item.rating">{{item.rating}}</span>
+                            <span *ngIf="!item.rating">-</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
