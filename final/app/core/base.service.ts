@@ -1,7 +1,7 @@
 import { Http } from "@angular/http";
 
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/Rx';
+import { Observable } from "rxjs/Observable";
+import "rxjs/Rx";
 import { Serializable } from "./serializable";
 import { Identifiable } from "./identifiable";
 
@@ -40,9 +40,9 @@ export abstract class BaseService<TModel extends Serializable & Identifiable> {
 
     private getEndpoint(action: string): string {
         if (!action) {
-            throw new Error('Parameter action is invalid.');
+            throw new Error("Parameter action is invalid.");
         }
 
-        return "/api/" + (action[0] === '/' && action.substr(1) || '') + action;
+        return "/api/" + (action[0] === "/" && action.substr(1) || "") + action;
     }
 }

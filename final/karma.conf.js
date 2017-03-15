@@ -36,7 +36,6 @@ module.exports = function (config) {
         files: [
             // System.js for module loading
             'node_modules/systemjs/dist/system.src.js',
-            'node_modules/systemjs/dist/system-polyfills.js',
 
             // Polyfills
             'node_modules/core-js/client/shim.js',
