@@ -10,20 +10,14 @@ import { SessionsComponent } from "./sessions/sessions.component";
 import { SessionComponent } from "./sessions/session/session.component";
 import { DataService } from "./shared/data.service";
 import { SessionService } from "./sessions/shared/session.service";
-
-const routes: Routes = [
-  { path: '', component: SessionsComponent },
-  { path: 'session/edit/:id', component: SessionComponent },
-  // { path: '**', redirectTo: '/', pathMatch: 'full' }
-];
-
+import { AppRoutingModule } from "./app-routing.module";
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
-    RouterModule.forRoot(routes),
+    AppRoutingModule,
     InMemoryWebApiModule.forRoot(DataService, { delay: 250 })
   ],
   declarations: [
