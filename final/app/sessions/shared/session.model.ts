@@ -6,7 +6,7 @@ export class Session implements Serializable, Identifiable {
     constructor(
         public id: number,
         public title: string,
-        public room: string,
+        public city: string,
         public rating?: number
     ) { }
 
@@ -14,7 +14,7 @@ export class Session implements Serializable, Identifiable {
         return {
             id: this.id,
             title: this.title,
-            room: this.room,
+            city: this.city,
             rating: this.rating
         };
     }
@@ -22,7 +22,7 @@ export class Session implements Serializable, Identifiable {
     public static deserialize(obj: any): Session {
         return new Session(obj.id,
             obj.title,
-            obj.room,
+            obj.city,
             obj.rating);
     }
 }
