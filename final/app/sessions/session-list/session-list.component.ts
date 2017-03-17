@@ -39,8 +39,4 @@ export class SessionListComponent implements OnInit {
         // })
     }
 
-    onEdit(item: Session) {
-        let link = ['/edit', item.id];
-        this.router.navigate(link);
-    }
 }

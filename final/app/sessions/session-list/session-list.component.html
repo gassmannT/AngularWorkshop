@@ -18,7 +18,7 @@
                         <td>{{ item.title }}</td>
                         <td>{{ item.room }}</td>
                         <td>
-                            <tt-star [rating]="item.rating || 0"></tt-star>
+                            <tt-star [rating]="item.rating"></tt-star>
                         </td>
                         <td>
                             <a [routerLink]="['/edit', item.id]">Edit</a>
