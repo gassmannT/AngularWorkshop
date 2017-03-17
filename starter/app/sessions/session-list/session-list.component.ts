@@ -8,6 +8,7 @@ import { Title, Meta } from "@angular/platform-browser";
 
 @Component({
     moduleId: module.id,
+    styleUrls: ['session-list.component.css'],
     templateUrl: 'session-list.component.html'
 })
 export class SessionListComponent implements OnInit {
