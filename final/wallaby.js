@@ -3,7 +3,6 @@ module.exports = function (wallaby) {
   return {
     files: [
       { pattern: 'node_modules/systemjs/dist/system.src.js', instrument: false },
-      { pattern: 'node_modules/systemjs/dist/system-polyfills.js', instrument: false },
 
       { pattern: 'node_modules/core-js/client/shim.js', instrument: false },
 

@@ -1,5 +1,5 @@
 import { InMemoryDbService } from "angular-in-memory-web-api";
-import { Session } from '../models/session';
+import { Session } from "../sessions/shared/session.model";
 
 export class DataService implements InMemoryDbService {
     createDb() {

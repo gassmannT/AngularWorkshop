@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 
-import { SessionService } from '../../../services/api/session.service';
-import { Session } from '../../../models/session';
+import { Session } from "../shared/session.model";
+import { SessionService } from "../shared/session.service";
 
 @Component({
     moduleId: module.id,
-    selector: 'session-edit',
-    templateUrl: 'session-edit.component.html'
+    selector: 'session',
+    templateUrl: 'session.component.html'
 })
-export class SessionEditComponent implements OnInit {
+export class SessionComponent implements OnInit {
     session: Session;
 
     constructor(

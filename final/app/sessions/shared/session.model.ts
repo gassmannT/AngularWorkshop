@@ -1,5 +1,5 @@
-import { Identifiable } from './identifiable';
-import { Serializable } from './serializable';
+import { Identifiable } from "../../core/identifiable";
+import { Serializable } from "../../core/serializable";
 
 export class Session implements Serializable, Identifiable {
 

@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 
-import { SessionService } from '../../../services/api/session.service';
-import { Session } from '../../../models/session';
+import { Session } from "./shared/session.model";
+import { SessionService } from "./shared/session.service";
 
 @Component({
     moduleId: module.id,
-    selector: 'session-list',
-    templateUrl: 'session-list.component.html'
+    selector: 'sessions',
+    templateUrl: 'sessions.component.html'
 })
-export class SessionListComponent implements OnInit {
+export class SessionsComponent implements OnInit {
     pageTitle: string;
     list: Session[] = [];
 
