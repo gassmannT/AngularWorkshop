@@ -4,9 +4,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', component: SessionListComponent },
+  { path: '', component: SessionListComponent }, //default
   { path: 'edit/:id', component: SessionDetailComponent },
-  // { path: '**', redirectTo: '/', pathMatch: 'full' }
+  { path: '**', redirectTo: '/', pathMatch: 'full' } //not found
 ];
 
 @NgModule({
