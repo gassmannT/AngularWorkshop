@@ -17,8 +17,7 @@
                         <td>{{ item.title }}</td>
                         <td>{{ item.room }}</td>
                         <td>
-                            <span *ngIf="item.rating">{{item.rating}}</span>
-                            <span *ngIf="!item.rating">-</span>
+                            <tt-star [rating]="item.rating || 0"></tt-star>
                         </td>
                     </tr>
                 </tbody>

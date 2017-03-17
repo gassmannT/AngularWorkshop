@@ -27,7 +27,7 @@ export class SessionsComponent implements OnInit {
     }
 
     onEdit(item: Session) {
-        let link = ['/session/edit', item.id];
+        let link = ['/edit', item.id];
         this.router.navigate(link);
     }
 }
