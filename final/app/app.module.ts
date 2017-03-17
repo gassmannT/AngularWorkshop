@@ -1,3 +1,4 @@
+import { TruncatePipe } from './shared/truncate.pipe';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SessionDetailComponent } from './sessions/session-detail/session-detail.component';
@@ -24,7 +25,8 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
     AppComponent,
     SessionListComponent,
     SessionDetailComponent,
-    StarComponent
+    StarComponent,
+    TruncatePipe
   ],
   providers: [
     SessionService

@@ -6,7 +6,8 @@ export class DataService implements InMemoryDbService {
         let sessions: Session[] = [
             new Session(1, "Testing mit Angular", "Frankfurt", 4),
             new Session(2, "The ultimate Angular workshop", "Regensdorf", 5),
-            new Session(3, "Deployment von Angular Applikationen", "Nürnberg", 3)
+            new Session(3, "Deployment von Angular Applikationen", "Nürnberg", 4),
+            new Session(4, "Basics in Xamarin", "Glattbrugg", 3, "too easy")
         ];
         return { sessions };
     }

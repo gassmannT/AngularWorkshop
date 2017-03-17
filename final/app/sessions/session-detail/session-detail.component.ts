@@ -13,7 +13,7 @@ import { SessionService } from "../shared/session.service";
     templateUrl: 'session-detail.component.html'
 })
 export class SessionDetailComponent implements OnInit, OnDestroy {
-    session: Observable<Session>;
+    session: Session;
     private sub: Subscription;
 
     constructor(
@@ -34,16 +34,16 @@ export class SessionDetailComponent implements OnInit, OnDestroy {
 
         this.sub = this.route.params.subscribe(params => {
             let id = +params["id"];
-            this.session = this.sessionService.getById(id);
+            this.sessionService.getById(id).subscribe(s => this.session = s);
         });
     }
     ngOnDestroy() {
         this.sub.unsubscribe();
     }
 
-    onSave({ value, valid }: { value: Session, valid: boolean }) { //Example of object destructuring
+    onSave({ valid }: { valid: boolean }, ) { //Example of object destructuring
         if (valid) {
-            this.sessionService.update(value).subscribe(() => {
+            this.sessionService.update(this.session).subscribe(() => {
                 this.router.navigate(['/'])
             });
         }

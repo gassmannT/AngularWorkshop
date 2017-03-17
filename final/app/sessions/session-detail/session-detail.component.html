@@ -1,4 +1,4 @@
-<div class="panel panel-primary" *ngIf="session | async; else loading; let session">
+<div class="panel panel-primary" *ngIf="session; else loading; let session">
     <div class="panel-heading">Session details: {{session.title}}</div>
     <div class="panel-body">
         <form #form="ngForm" (ngSubmit)="onSave(form)" novalidate>
@@ -33,6 +33,10 @@
                 <div class="form-group">
                     <label for="inputRating">Rating: </label>
                     <input id="inputRating" name="inputRating" class="form-control" type="text" [(ngModel)]="session.rating" />
+                </div>
+                <div class="form-group" *ngIf="session.rating > 0 && session.rating < 4">
+                    <label for="inputReason">Reason: </label>
+                    <textarea id="inputReason" name="inputReason" class="form-control" [(ngModel)]="session.reason" [required]="session.rating < 4"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Save</button>
                 <button type="button" class="btn" (click)="onBack()">Cancel</button>
