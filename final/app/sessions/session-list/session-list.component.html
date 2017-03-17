@@ -19,8 +19,7 @@
                             <tt-star [rating]="item.rating || 0"></tt-star>
                         </td>
                         <td>
-                            <a (click)="onEdit(item)">Rate</a>
-                            <!-- todo -->
+                            <a [routerLink]="['/edit', item.id]">Edit</a>
                         </td>
                     </tr>
                 </tbody>
