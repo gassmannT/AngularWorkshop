@@ -41,4 +41,4 @@
 * Add e2e tests
 
 
-Solution can be found in `final`
+Solution can be found in `final` folder.

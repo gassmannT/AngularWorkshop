@@ -1,4 +1,5 @@
-# The ultimate Angular workshop - Starter files
+# The ultimate Angular workshop
 
-## Final Solution
+## This is the final Solution
 
+Enjoy!
