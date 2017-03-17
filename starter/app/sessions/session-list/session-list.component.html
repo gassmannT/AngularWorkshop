@@ -13,20 +13,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="session" *ngFor="let item of list">
-                        <td>{{ item.title }}</td>
-                        <td>{{ item.city }}</td>
+                    <!-- TODO: Add a ngFor directive to iterate through our list of session and show the properties -->
+                    <tr class="session">
+                        <td>Title</td>
+                        <td>City</td>
                         <td>
                             <tt-star [rating]="item.rating"></tt-star>
                         </td>
                         <td>
-                            <span *ngIf="item.reason; else noReason">
-                            {{ item.reason | truncate : 10 : '.'}}
-                            </span>
-                            <ng-template #noReason>-no reason-</ng-template>
+                            <!-- TODO Advanced: Only show 10 characters of the reason and if no reason is presented show default message (Hint: check existing pipes) -->
                         </td>
                         <td>
-                            <a [routerLink]="['/edit', item.id]">Edit</a>
+                            <!-- TODO: Add a link to the details page with parameter id (hint: use [routerLink]) -->
+                            <a>Edit</a>
                         </td>
                     </tr>
                 </tbody>
