@@ -2,7 +2,7 @@
 
 ## Useful links
 * https://angular.io/docs/ts/latest/
-* Our slides on github
+* [Our slides on GitHub](https://github.com/gassmannT/AngularWorkshop/blob/master/bat_tga_The_ultimate_Angular_Workshop.pdf)
 * Ask Thomas :-)
 
 ## Steps to start
