@@ -1,11 +1,11 @@
-import { SessionComponent } from './sessions/session/session.component';
-import { SessionsComponent } from './sessions/sessions.component';
+import { SessionDetailComponent } from './sessions/session-detail/session-detail.component';
+import { SessionListComponent } from './sessions/session-list/session-list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', component: SessionsComponent },
-  { path: 'edit/:id', component: SessionComponent },
+  { path: '', component: SessionListComponent },
+  { path: 'edit/:id', component: SessionDetailComponent },
   // { path: '**', redirectTo: '/', pathMatch: 'full' }
 ];
 

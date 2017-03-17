@@ -4,24 +4,32 @@
     </div>
     <div class="panel-body">
         <div class="table-responsive">
-            <table class="table session-table" *ngIf="list && list.length">
+            <table class="table session-table" *ngIf="list | async; else loading; let list">
                 <thead>
                     <tr>
                         <th>Title</th>
                         <th>Room</th>
                         <th>Rating</th>
+                        <th>&nbsp;</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="session" *ngFor="let item of list" (click)="onEdit(item)">
+                    <tr class="session" *ngFor="let item of list">
                         <td>{{ item.title }}</td>
                         <td>{{ item.room }}</td>
                         <td>
                             <tt-star [rating]="item.rating || 0"></tt-star>
                         </td>
+                        <td>
+                            <a (click)="onEdit(item)">Rate</a>
+                            <!-- todo -->
+                        </td>
                     </tr>
                 </tbody>
             </table>
+            <ng-template #loading>
+                List is loading...
+            </ng-template>
         </div>
     </div>
 </div>

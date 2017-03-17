@@ -6,11 +6,12 @@ import { Component, OnInit } from '@angular/core';
     templateUrl: 'app.component.html'
 })
 export class AppComponent implements OnInit {
-    public title: string;
+    public pageTitle: string;
 
     constructor() { }
 
     ngOnInit() {
-        this.title = "Session rating app";
+        this.pageTitle = "Session rating app";
+        
     }
 }
