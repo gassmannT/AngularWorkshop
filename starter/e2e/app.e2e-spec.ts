@@ -7,7 +7,9 @@ describe("QuickStart E2E Tests", () => {
     });
 
     it("should display title", () => {
-        expect(element(by.css("h1")).getText()).toEqual("hallo basta");
+        // Arrange
+        // Act
+        // Assert
     });
 
 });
